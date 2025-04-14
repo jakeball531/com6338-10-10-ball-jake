@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NBA Player Lookup</title>
+  <style>
+    :root {
+      --primary-color: #121212;
+      --text-color: #f1f1f1;
+      --border-color: #333333;
+      --button-text: #000000;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      font-size: 1rem;
+    }
+
+    #header {
+      width: 100%;
+      max-width: 1600px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+      color: #ccc;
+    }
+
+    input {
+      padding: 10px 14px;
+      font-size: 1rem;
+
+      border-radius: 6px;
+      color: var(--button-text);
+    }
+
+    button {
+      padding: 12px;
+      margin-top: 12px;
+      color: var(--button-text);
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    button:hover {
+      background-color: #aaaaaa;
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    @media (max-width: 600px) {
+    body {
+      padding: 20px 10px;
+    }
+
+    nav {
+      gap: 16px;
+      font-size: 1rem;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    button {
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 1024px) and (min-width: 601px) {
+    body {
+      padding: 30px 16px;
+    }
+
+    nav {
+      gap: 32px;
+      font-size: 1.1rem;
+    }
+
+    form {
+      max-width: 300px;
+    }
+  }
+
+
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="playerlookup.html">NBA Player Lookup</a>
+        <a href="pokesearch.html">Pokemon Search</a>
+    </nav>
+  </div>
+
+  <h2>NBA Player Lookup</h2>
+  <p>On form submission returns the first player who's last name is entered.</p>
+
+  <form>
+    <div>
+      <label>Player Last Name</label>
+      <input type="text" id="first-name" name="search" required/>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <button id="random-player">Random Player</button>
+
+  <div id="player-info"></div>
+
+  <script src="playerlookup.js"></script>
+
+</body>
+</html>

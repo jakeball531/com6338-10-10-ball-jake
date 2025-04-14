@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Homepage</title>
+  <style>
+    :root {
+      --primary-color: #121212;
+      --text-color: #f1f1f1;
+      --border-color: #333333;
+      --button-text: #000000;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      font-size: 1rem;
+    }
+
+    #header {
+      width: 100%;
+      max-width: 1600px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 16px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      width: 100%;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .main-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .main-content p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      flex: 1 1 45%;
+      max-width: 500px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.02);
+    }
+
+    .links img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      nav {
+        gap: 16px;
+        font-size: 1rem;
+        flex-wrap: wrap;
+      }
+
+      form {
+        width: 100%;
+      }
+
+      .links a {
+        flex-basis: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) and (min-width: 601px) {
+      body {
+        padding: 30px 16px;
+      }
+
+      nav {
+        gap: 32px;
+        font-size: 1.1rem;
+      }
+
+      form {
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="playerlookup.html">NBA Player Lookup</a>
+      <a href="pokesearch.html">Pokemon Search</a>
+    </nav>
+  </div>
+
+  <div class="main-content">
+    <h1>COM6338 "Group" Project</h1>
+    <p>Welcome to my Assignment 10 project! This site includes two pages: one to look up Pokemon and one to look up NBA players. Click on the images below to explore.</p>
+
+    <div class="links">
+      <a href="playerlookup.html">
+        <img src="playerlookup.jpg">
+      </a>
+      <a href="pokesearch.html">
+        <img src="pokesearch.png">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
